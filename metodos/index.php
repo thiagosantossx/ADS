@@ -25,8 +25,27 @@ function imprimirAreaCirculo( $raio){
 }
 
 imprimirMeuNome();
-$result = somar(5, 10);
+if(isset($_GET["x"])){
+    $v1 = $_GET["x"];
+}else{
+    $v1 = 0;
+}
+
+if(isset( $_GET["y"]))
+$v2 = $_GET["y"];
+else
+$v2 = 0;
+
+isset($_GET["r"]) ? $raio =$_GET["r"] : $raio = 0;
+
+$result = somar( $v1, $v2);
+//$v1 = $_GET["x"];
+//$v2 = $_GET["y"];
+//$raio = $_GET["r"];
+
+//$result = somar( 5.1, 10.0);
+
 echo"<br>Resutado: ".$result;
 echo "<hr>Valor do PI: ".getPI();
-imprimirAreaCirculo(5);
+imprimirAreaCirculo($raio);
 imprimirAreaCirculo(10);
